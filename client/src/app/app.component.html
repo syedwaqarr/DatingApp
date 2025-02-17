@@ -1,0 +1,15 @@
+<h1>{{title}}</h1>
+
+<!-- Display the list of users using *ngFor structural directive -->
+<!-- <ul>
+<li *ngFor="let user of users">
+    {{user.username}}
+</li>
+</ul> -->
+
+<!-- Display the list of users using angular control flow -->
+<ul>
+    @for (user of users; track user.id) {
+        <li>{{user.username}}</li>
+    }
+</ul> 
