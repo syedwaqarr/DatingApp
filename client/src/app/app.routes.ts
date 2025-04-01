@@ -8,6 +8,7 @@ import { authGuard } from './_guards/auth.guard';
 import { TestErrorsComponent } from './errors/test-errors/test-errors.component';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
+import { MemberEditComponent } from './members/member-edit/member-edit.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,10 +19,11 @@ export const routes: Routes = [
     children: [
       { path: 'lists', component: ListsComponent },
       { path: 'messages', component: MessagesComponent },
+      { path: 'members', component: MemberListComponent },
+      { path: 'member/edit', component: MemberEditComponent },
+      { path: 'members/:username', component: MemberDetailComponent },
     ],
   },
-  { path: 'members/:username', component: MemberDetailComponent },
-  { path: 'members', component: MemberListComponent },
   { path: 'error', component: TestErrorsComponent },
   { path: 'not-found', component: NotFoundComponent },
   { path: 'server-error', component: ServerErrorComponent },
